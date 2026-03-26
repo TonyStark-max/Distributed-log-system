@@ -1,7 +1,7 @@
 package com.log_system.order_service.Controller;
 
 
-import com.log_system.order_service.Event.OrderData;
+import com.log_system.order_service.event.OrderData;
 import com.log_system.order_service.Service.OrderProducer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

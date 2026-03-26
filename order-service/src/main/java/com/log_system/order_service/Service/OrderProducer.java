@@ -1,8 +1,8 @@
 package com.log_system.order_service.Service;
 
 
-import com.log_system.order_service.Event.EventGen;
-import com.log_system.order_service.Event.OrderData;
+import com.log_system.order_service.event.Event;
+import com.log_system.order_service.event.OrderData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -12,11 +12,11 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class OrderProducer {
-    private final KafkaTemplate<String, EventGen<OrderData>> kafkaTemplate;
+    private final KafkaTemplate<String, Event<OrderData>> kafkaTemplate;
 
     public void sendOrderCreatedEvent(OrderData orderData){
 
-        EventGen<OrderData> event=new EventGen<>(
+        Event<OrderData> event=new Event<>(
         UUID.randomUUID().toString(),
                 "order_created",
                 "order_service",

@@ -1,4 +1,4 @@
-package com.log_system.order_service.Event;
+package com.log_system.order_service.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
