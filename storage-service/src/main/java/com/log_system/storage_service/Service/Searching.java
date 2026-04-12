@@ -52,7 +52,7 @@ public class Searching {
                                                             .field("timestamp")
                                                             .gte(JsonData.of(from))
                                                             .lte(JsonData.of(to))
-                                                    )); s
+                                                    ));
                                                 }
 
                                                 return b;
